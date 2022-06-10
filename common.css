@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, ul, p { margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; }
+
+/* 헤더 */
+#header { height: 43px; background: linear-gradient(180deg, #8e0000 0, #700000 100%);
+          border-bottom: 1px solid #200; box-sizing: border-box; }
+          /*높이, 배경 그라데이션*/
+#header h1 { color: #fff; text-align: center; } /* 텍스트 중앙배치 */
+#header a { position: absolute; height: 32px; top: 4px;
+            background: url(sprites.png) no-repeat;
+            text-indent: -9999px }
+            /* 영역과 위치 지정 후 sprites.png를 각 a에 적용 */
+#header a.btn { width: 62px; left: 4px; }
+#header a.toggle { width: 32px; right: 4px;
+                    background-position-x: right; }
+
+/* toggle */
+#toggle { background: #808080; padding: 20px 18px; }
+#toggle ul { background: #fff; overflow: hidden; }
+#toggle ul li { width: 80px; height: 30px;
+                float: left; line-height: 30px; }
+#toggle ul li a { color: #000; }
+
+/* gnb */
+#gnb ul { display: flex; background: linear-gradient(180deg, #8e0000 0, #700000 100%);
+        border-bottom: 2px solid #200; }
+#gnb ul li { width: 25%; height: 35px; text-align: center; }
+#gnb ul li a { display: block; line-height: 35px; color: #fff; }
+#gnb ul li a:hover { background: #fff; color: #000; }
+
+/* lnb */
+#lnb ul { display: flex; background: #fff;
+          border-bottom: 1px solid #200; }
+#lnb ul li { width: 20%; height: 35px; text-align: center; }
+#lnb ul li a { display: block; line-height: 35px; color: #000;
+                position: relative; }
+#lnb ul li a::after { content: ""; position: absolute; top: 10px; left: -1px;
+                      height: 15px; border-left: 1px solid #000; }
+#lnb ul li a:hover { background: #700000; color: #fff; }
+
+/* content */
+#content { padding-bottom: 50px; }
+#content header { padding: 30px 20px; }
+#content p { margin: 0 10px 10px; }
+
+/* footer */
+#footer { padding: 20px 0; border-top: 3px solid #000; text-align: center; }
+#footer address {}
+#footer small {}
